@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .rectangle{
+width: 1000%;
+height: 40%;
+margin:auto;
+    }
+
+.text_center{
+color: #000000;
+text-align: center;
+font-size:200%
+}
+table{
+    background-color: rgb(255, 255, 224, 0.8);
+    border-radius: 10px;
+}
+.custom-button{
+background-color: #ffffff;
+border-color: #8f8787;
+border-radius: 5px;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic_page</title>
+
+</head>
+<body>
+<center>
+    <div class="rectangle text_center">{{prod_title}}</div>
+    <p>
+        <table align=center width=60% cellspacing=5 border=5 bordercolor=#fdcf85 bgcolor=#f8f8ff>
+            <tr class="tab_title">
+                <td width=30% bgcolor=#ffc0cb><strong>ID поставщика</strong></td>
+                <td width=30% bgcolor=#ffc0cb><strong>Название детали</strong></td>
+            </tr>
+        {% for shipper in shippers %}
+            <tr>
+                <td width=30%>{{shipper['sh_id']}}</td>
+                <td width=30%>{{shipper['sh_name']}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    <form>
+        <br><br>
+        <input type="button" value="Вернуться назад" onclick="history.back()">
+    </form>
+    </p>
+</center>
+
+</body>
+</html>

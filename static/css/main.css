@@ -1,0 +1,532 @@
+
+/*@media (max-width:540px) {*/
+
+/*  body>aside,*/
+/*  body>main {*/
+/*    grid-area: stack*/
+/*  }*/
+/*  body{*/
+/*    background-image: url('https://vsememy.ru/kartinki/wp-content/uploads/2023/04/1675752534_papik-pro-p-risunok-sklad-1.jpg');*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+/*.logo {width: 4%;*/
+/*       height: 4%;}*/
+/*    .rectangle{*/
+/*border-color: black;*/
+/*border: 3px solid;*/
+/*width: 100%;*/
+/*height: 30%;*/
+/*margin:auto;*/
+/*    }*/
+
+/*    .brectangle{*/
+/*width: 20%;*/
+/*height: 40px;*/
+/*border:1px solid;*/
+/*border-radius: 5px;*/
+/*margin:auto;*/
+/*background-color: rgba(35, 31, 32, 0.6);*/
+/*color: white;*/
+/*    }*/
+/*}*/
+/*.button {*/
+/*    background-color: #f5a6d0;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    color: white;*/
+/*    padding: 15px 32px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    font-size: 16px;*/
+/*     cursor: pointer;*/
+/*}*/
+/*-open {*/
+/*  --easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);*/
+/*  --duration: .6s;*/
+/*  display: grid;*/
+/*  grid-template-columns: [nav] 2fr [escape] 1fr*/
+/*}*/
+
+/*@media (max-width:540px) {*/
+/*  #sidenav-open {*/
+/*    position: -webkit-sticky;*/
+/*    position: sticky;*/
+/*    top: 0;*/
+/*    max-height: 100vh;*/
+/*    overflow-x: hidden;*/
+/*    overflow-y: auto;*/
+/*    overflow: hidden auto;*/
+/*    -ms-scroll-chaining: none;*/
+/*    overscroll-behavior: contain;*/
+/*    visibility: hidden;*/
+/*    transform: translateX(-110vw);*/
+/*    will-change: transform;*/
+/*    transition: transform var(--duration) var(--easeOutExpo), visibility 0s linear var(--duration)*/
+/*  }*/
+
+/*  #sidenav-open:target {*/
+/*    visibility: visible;*/
+/*    transform: translateX(0);*/
+/*    transition: transform var(--duration) var(--easeOutExpo)*/
+/*  }*/
+/*}*/
+
+/*@media (prefers-reduced-motion:reduce) {*/
+/*  #sidenav-open {*/
+/*    --duration: 1ms*/
+/*  }*/
+/*}*/
+
+/*#sidenav-button,*/
+/*#sidenav-close {*/
+/*  -webkit-tap-highlight-color: transparent;*/
+/*  -webkit-touch-callout: none;*/
+/*  -webkit-user-select: none;*/
+/*  -moz-user-select: none;*/
+/*  -ms-user-select: none;*/
+/*  user-select: none;*/
+/*  touch-action: manipulation*/
+/*}*/
+
+/*@media (min-width:540px) {*/
+
+/*  #sidenav-button,*/
+/*  #sidenav-close {*/
+/*    display: none*/
+/*  }*/
+/*}*/
+
+/*nav {*/
+/*  display: inline-flex;*/
+/*  flex-direction: column;*/
+/*  padding: 2rem;*/
+/*  font-size: 1.25rem;*/
+/*  color: #e2e2e2;*/
+/*  color: var(--text)*/
+/*}*/
+
+/*@media (min-width:540px) {*/
+/*  nav {*/
+/*    -webkit-padding-before: 4.5rem;*/
+/*    padding-block-start: 4.5rem*/
+/*  }*/
+/*}*/
+
+/*@media (max-width:540px) {*/
+/*  nav {*/
+/*    background-color: #303030;*/
+/*    background-color: var(--surface2);*/
+/*    -webkit-border-end: 1px var(--surface1);*/
+/*    border-inline-end: 1px var(--surface1);*/
+/*    box-shadow: 5px 0 40px rgba(0, 0, 0, .45);*/
+/*    font-size: 1.5rem*/
+/*  }*/
+/*}*/
+
+/*nav>h4 {*/
+/*  text-transform: uppercase*/
+/*}*/
+
+/*nav>h4:not(:first-child) {*/
+/*  -webkit-margin-before: 2rem;*/
+/*  margin-block-start: 2rem*/
+/*}*/
+
+/*nav a {*/
+/*  text-decoration: none;*/
+/*  line-height: 1.25*/
+/*}*/
+
+/*.hamburger {*/
+/*  --size: 4rem;*/
+/*  display: flex;*/
+/*  align-content: center;*/
+/*  justify-content: center;*/
+/*  place-content: center;*/
+/*  padding: 1rem;*/
+/*  box-sizing: border-box;*/
+/*  border-radius: 50%;*/
+/*  border: 2px solid transparent;*/
+/*  -webkit-margin-start: -1rem;*/
+/*  margin-inline-start: -1rem;*/
+/*  block-size: var(--size);*/
+/*  inline-size: var(--size);*/
+/*  outline: none;*/
+/*  transition: border-color .25s ease, background-color .25s ease*/
+/*}*/
+
+/*.hamburger:hover {*/
+/*  border-color: rgba(255, 20, 146, .5);*/
+/*  border-color: hsl(var(--brandHSL)/50%)*/
+/*}*/
+
+/*.hamburger:focus {*/
+/*  border-color: rgba(255, 20, 146, .12);*/
+/*  border-color: hsl(var(--brandHSL)/12%);*/
+/*  background: rgba(255, 20, 146, .1);*/
+/*  background: hsl(var(--brandHSL)/10%)*/
+/*}*/
+
+/*.hamburger:hover svg>line {*/
+/*  stroke: #ff1492;*/
+/*  stroke: hsl(var(--brandHSL))*/
+/*}*/
+
+/*.hamburger:active {*/
+/*  background: rgba(255, 20, 146, .2);*/
+/*  background: hsl(var(--brandHSL)/20%)*/
+/*}*/
+
+/*.hamburger>svg {*/
+/*  width: 100%*/
+/*}*/
+
+/*.hamburger>svg>line {*/
+/*  stroke: #e2e2e2;*/
+/*  stroke: var(--text);*/
+/*  stroke-width: 7px;*/
+/*  transition: stroke .25s ease*/
+/*}*/
+
+/*aside>a {*/
+/*  outline-offset: -1px;*/
+/*  outline: 1px solid transparent*/
+/*}*/
+
+/*aside>a:focus {*/
+/*  outline-color: #ff1492;*/
+/*  outline-color: hsl(var(--brandHSL));*/
+/*  transition: outline-color .25s ease*/
+/*}*/
+
+/*main {*/
+/*  padding: .5rem 1.5rem*/
+/*}*/
+
+/*main>header {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*  min-block-size: 3rem;*/
+/*  -webkit-margin-after: 1rem;*/
+/*  margin-block-end: 1rem*/
+/*}*/
+/*.articleleft{*/
+
+/*}*/
+/*article {*/
+/*  width:560px;    !*   decreased to 600px  *!*/
+/*  margin-left: 20px;*/
+/*  margin-right: 10px;*/
+/*   margin-top: 10px;*/
+/*  display: inline-grid;*/
+/*  gap: 2ch;*/
+/*  background: #303030;*/
+/*  background: var(--surface2);*/
+/*  padding: 2ch;*/
+/*  border-radius: 1ch;*/
+/*  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);*/
+/*  text-align: center*/
+/*}*/
+/*.bigarticle{*/
+/*    width:1200px;*/
+/*}*/
+
+/*.verybigarticle{*/
+/*    width:1600px;*/
+/*}*/
+/*article>* {*/
+/*  margin: 0*/
+/*}*/
+
+/*article>p+h1,*/
+/*article>p+h2,*/
+/*article>p+h3,*/
+/*article>p+h4,*/
+/*article>p+h5,*/
+/*article>p+h6 {*/
+/*  margin-top: 2ch*/
+/*}*/
+
+/*:root {*/
+/*  --surface: #1b1b1b;*/
+/*  --surface2: #303030;*/
+/*  --text: #e2e2e2;*/
+/*  --text2: #ababab;*/
+/*  --brandHSL: 328 100% 54%*/
+/*}*/
+
+/*@media (prefers-color-scheme:light) {*/
+/*  :root {*/
+/*    --surface: #e2e2e2;*/
+/*    --surface2: #fffffe;*/
+/*    --text: #303030;*/
+/*    --text2: #5e5e5e*/
+/*  }*/
+/*}*/
+
+/*body {*/
+/*  min-block-size: 100vh;*/
+/*  font-family: BLOKK, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;*/
+/*  padding: 0;*/
+/*  background: #1b1b1b;*/
+/*  background: var(--surface)*/
+/*}*/
+
+/*body,*/
+/*figure,*/
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4 {*/
+/*  margin: 0;*/
+/*  color: #e2e2e2;*/
+/*  color: var(--text)*/
+/*}*/
+/*h1{*/
+/*text-transform: uppercase;*/
+/*}*/
+/*h2 {*/
+/*  font-size: 2.5rem*/
+/*}*/
+
+/*h3 {*/
+/*  font-size: 1.5rem;*/
+/*  max-inline-size: 30ch*/
+/*}*/
+
+/*p {*/
+/*  line-height: 1.5;*/
+/*  color: #ababab;*/
+/*  color: var(--text2);*/
+/*  max-inline-size: 50ch*/
+/*}*/
+
+/*a {*/
+/*  color: #f5a6d0;*/
+/*  outline-color: #ff1492;*/
+/*  outline-color: hsl(var(--brandHSL));*/
+/*  outline-offset: 5px*/
+/*}*/
+
+/*a:hover {*/
+/*  color: #ff1492;*/
+/*  color: hsl(var(--brandHSL))*/
+/*}*/
+
+/*table {*/
+/*    width: 1100px; !* Ширина таблицы *!*/
+/*    !*border: 1px white; !* Рамка вокруг таблицы *!*/
+/*    margin: auto; !* Выравниваем таблицу по центру окна  *!*/
+/*}*/
+/*.bigtable{*/
+/*width: 1500px;*/
+/*}*/
+/*td {*/
+/*    text-align: center; !* Выравниваем текст по центру ячейки *!*/
+/*    }*/
+
+/*.button1{*/
+/*    background-color: #555755; !* Green *!*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    color: white;*/
+/*    padding: 8px 25px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    font-size: 16px;*/
+/*     cursor: pointer;*/
+/*}*/
+
+/*.buttonwide{*/
+/*    background-color: #555755;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    color: white;*/
+/*    padding: 8px 50px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    font-size: 16px;*/
+/*     cursor: pointer;*/
+/*}*/
+/*.button1:hover {*/
+/*  background: #949494;*/
+/*}*/
+
+/*.button:hover {*/
+/*  background: #ff1492;*/
+/*}*/
+
+/*.buttonwide:hover {*/
+/*  background: #949494;*/
+/*}*/
+
+
+
+/*input{*/
+/*  padding:10px;*/
+/*   border:0;*/
+/*   border-radius:10px;*/
+/*  margin:10px 0; // add top and bottom margin*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*body*/
+/*{*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  !* make it look decent enough *!*/
+/*  !*background: #232323;*!*/
+/*  !*color: #cdcdcd;*!*/
+/*  font-family: "Avenir Next", "Avenir", sans-serif;*/
+/*}*/
+
+/*#menuToggle*/
+/*{*/
+/*  display: block;*/
+/*  position: relative;*/
+
+
+/*  z-index: 1;*/
+
+/*  -webkit-user-select: none;*/
+/*  user-select: none;*/
+/*}*/
+
+/*#menuToggle a*/
+/*{*/
+/*  text-decoration: none;*/
+/*  color: #232323;*/
+
+/*  transition: color 0.3s ease;*/
+/*}*/
+
+/*#menuToggle a:hover*/
+/*{*/
+/*  color: tomato;*/
+/*}*/
+
+
+/*#menuToggle input[type="checkbox"]*/
+/*{*/
+
+/*  width: 40px;*/
+/*  height: 100px;*/
+/*  position: absolute;*/
+/*  top: -7px;*/
+/*  left: -5px;*/
+
+
+/*  cursor: pointer;*/
+
+/*  opacity: 0; !* hide this *!*/
+/*  z-index: 2; !* and place it over the hamburger *!*/
+
+/*  -webkit-touch-callout: none;*/
+/*}*/
+
+/*!**/
+/* * Just a quick hamburger*/
+/* *!*/
+/*#menuToggle span*/
+/*{*/
+/*  display: block;*/
+/*  width: 33px;*/
+/*  height: 4px;*/
+/*  margin-bottom: 5px;*/
+/*  position: relative;*/
+
+/*  background: #cdcdcd;*/
+/*  border-radius: 3px;*/
+
+/*  z-index: 1;*/
+
+/*  transform-origin: 4px 0px;*/
+
+/*  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),*/
+/*              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),*/
+/*              opacity 0.55s ease;*/
+/*}*/
+
+/*#menuToggle span:first-child*/
+/*{*/
+/*  transform-origin: 0% 0%;*/
+/*}*/
+
+/*#menuToggle span:nth-last-child(2)*/
+/*{*/
+/*  transform-origin: 0% 100%;*/
+/*}*/
+
+/*!**/
+/* * Transform all the slices of hamburger*/
+/* * into a crossmark.*/
+/* *!*/
+/*#menuToggle input:checked ~ span*/
+/*{*/
+/*  opacity: 1;*/
+/*  transform: rotate(45deg) translate(-2px, -1px);*/
+/*  background: #232323;*/
+/*}*/
+
+/*!**/
+/* * But let's hide the middle one.*/
+/* *!*/
+/*#menuToggle input:checked ~ span:nth-last-child(3)*/
+/*{*/
+/*  opacity: 0;*/
+/*  transform: rotate(0deg) scale(0.2, 0.2);*/
+/*}*/
+
+/*!**/
+/* * Ohyeah and the last one should go the other direction*/
+/* *!*/
+/*#menuToggle input:checked ~ span:nth-last-child(2)*/
+/*{*/
+/*  transform: rotate(-45deg) translate(0, -1px);*/
+/*}*/
+
+/*!**/
+/* * Make this absolute positioned*/
+/* * at the top left of the screen*/
+/* *!*/
+/*#menu*/
+/*{*/
+/*  position: absolute;*/
+/*  width: 400px;*/
+/*  margin: -100px 0 0 -50px;*/
+/*  height: 100vh;*/
+/*  padding-top: 125px;*/
+
+/*  background: #ffd9fa;*/
+/*  list-style-type: none;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  !* to stop flickering of text in safari *!*/
+
+/*  transform-origin: 0% 0%;*/
+/*  transform: translate(-100%, 0);*/
+
+/*  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);*/
+/*}*/
+
+/*#menu li*/
+/*{*/
+/*  padding: 10px 0;*/
+/*  font-size: 22px;*/
+/*}*/
+
+/*!**/
+/* * And let's slide it in from the left*/
+/* *!*/
+/* .smallarticle{*/
+/*  width:300px;*/
+/*  background: #d1d1d1;*/
+/* }*/
+/*#menuToggle input:checked ~ ul*/
+/*{*/
+/*  transform: none;*/
+/*}*/

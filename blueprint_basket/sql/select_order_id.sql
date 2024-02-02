@@ -1,0 +1,1 @@
+select max(idzakaz) as max_id from rk6.zakaz where user_id = '$user_id'

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body{
+    background-image: url('https://vsememy.ru/kartinki/wp-content/uploads/2023/04/1675752534_papik-pro-p-risunok-sklad-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo {width: 4%;
+       height: 4%;}
+    .rectangle{
+border-color: black;
+border: 3px solid;
+width: 100%;
+height: 30%;
+margin:auto;
+    }
+
+    .brectangle{
+width: 20%;
+height: 40px;
+border:1px solid;
+border-radius: 5px;
+margin:auto;
+background-color: rgba(35, 31, 32, 0.6);
+color: white;
+    }
+.text_center{
+color: #000000;
+text-align: center;
+font-size:200%
+}
+
+.header {color: black;
+        border-color: black;
+        padding: 10px;
+        border: 2px solid black;
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Главное меню</title>
+</head>
+
+<body>
+<center>
+<!--    <a href="{{url_for('auth_bp.lk_index')}}">-->
+<!--        <img align ="right" src="../static/img_1.png" class="logo" alt="Кнопка">-->
+<!--    </a>-->
+    <header>
+        <a href="{{url_for('auth_bp.lk_index')}}">
+        <img align ="right" src="../static/img_1.png" class="logo" alt="Кнопка">
+    </a>
+        <h1>Главное меню склада</h1>
+    </header>
+<!--    <div class="rectangle text_center">Главное меню склада</div>-->
+    <br><br>
+    <a href="{{url_for('bp_query.query_index')}}"> <button class="brectangle"> Запросы </button></a>
+    <br><br>
+    <a href="{{url_for('bp_report.start_report')}}"> <button class="brectangle">Работа с отчетами</button></a>
+    <br><br>
+    <a href ="{{url_for('auth_bp.lk_index')}}"> <button class="brectangle">Выход</button></a>
+    <br><br>
+    <a href="{{ url_for('bp_query.query_index') }}"><button class="brectangle">Посмотреть данные своих накладных</button></a><br>
+    <a href="{{ url_for('bp_order.order_index') }}"><button class="brectangle">Создать новую накладную</button></a><br>
+    <br><br>
+    <br><br>
+    <a href="/exit"><button class="brectangle"> Нажмите для выхода из системы</button></a>
+
+</center>
+</body>
+</html>
+
+<!--#СТОП-->

@@ -1,0 +1,51 @@
+<!--{% macro render_item(item, pr_id, show_form = False, show_amount = False) %}-->
+
+<!--<div style = "border-style: solid; border-color: black; margin:5px;">-->
+<!--    <p>-->
+<!--        <span>Название</span>-->
+<!--        <span style="color:blue"> {{item['pr_name']}}</span>-->
+
+<!--    </p>-->
+
+<!--    {% if show_form %}-->
+<!--    <form method = "POST" action="">-->
+<!--        <input style="color:red" type="submit" name="send" value = "Добавить">-->
+<!--        <input type="hidden" value = "{{pr_id}}" name="pr_id" id="{{pr_id}}">-->
+<!--    </form>-->
+<!--    {% endif %}-->
+
+<!--    {% if show_amount %}-->
+<!--    <span>Количество</span>-->
+<!--    <span style="color:blue"> {{item['amount']}}</span>-->
+<!--    {% endif %}-->
+<!--</div>-->
+<!--{% endmacro %}-->
+
+{% macro render_item(item, pr_id, show_form = False, show_amount = False) %}
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">
+            <i class="fas fa-shopping-cart"></i>
+            Название: <span class="text-primary">{{ item['pr_name'] }}</span>
+        </h5>
+
+        {% if show_form %}
+            <form method="POST" action="">
+                <button type="submit" class="btn btn-danger">
+                    <i class="fas fa-cart-plus"></i>
+                    Добавить
+                </button>
+                <input type="hidden" value="{{pr_id}}" name="pr_id" id="{{pr_id}}">
+            </form>
+        {% endif %}
+
+        {% if show_amount %}
+            <p class="card-text">
+                <i class="fas fa-list-ol"></i>
+                Количество: <span class="text-primary">{{ item['amount'] }}</span>
+
+            </p>
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}

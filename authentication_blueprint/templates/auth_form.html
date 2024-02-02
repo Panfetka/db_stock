@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+
+</head>
+<body>
+<center>
+    <header>
+
+        <a href="{{url_for('auth_bp.lk_index')}}">
+
+    </a>
+        <h1>Склад</h1>
+    </header><br>
+    <h1>Вам необходимо авторизироваться</h1>
+    <form action = "" method = "POST">
+        <label for = "login">login</label>
+        <input type = "text" name = "login" id = "login">
+        <!-- В label "for" и в input "id" одинаковые -->
+        <br><br>
+        <label for = "password">password</label>
+        <input type = "text" name = "password" id = "password">
+        <br>
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% else %}
+            <br><br><br>
+        {% endif %}
+        <input type = "submit" class = "button" value = "Авторизироваться">
+        <input type = "reset" class = "button" value = "Очистить">
+        <br><br>
+        <a href = "/" style="color: green;">Вернуться в главное меню</a>
+    </form>
+    <br><br>
+    <h2 align="center">{{ message }}</h2>
+</center>
+
+</body>
+</html>

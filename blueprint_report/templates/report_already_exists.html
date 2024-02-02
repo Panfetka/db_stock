@@ -1,0 +1,29 @@
+<html lang="en">
+<style>
+    .brectangle{
+width: 20%;
+height: 40px;
+border:1px solid;
+border-radius: 5px;
+margin:auto;
+background-color: rgba(35, 31, 32, 0.6);
+color: white;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Внимание</title>
+</head>
+<body>
+<main align="center">
+    <article>
+        <h1 align="center">
+        Отчет о {{theme}} за {{title[1]}} месяц {{title[0]}} года был создан ранее
+            <br><br>
+            <a href={{url_for('bp_report.start_report')}}><button class="brectangle">Нажмите для возврата в меню отчетов</button></a>
+      </h1>
+    </article>
+</main>
+</body>
+</html>

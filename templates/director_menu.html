@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block admin %}
+<center>
+    <br>
+    <a href="{{ url_for('bp_query.query_index') }}"><button class="brectangle">Начать работу с запросами</button></a>
+    <br><br>
+    <a href="{{ url_for('bp_report.start_report') }}"><button class="brectangle">Начать работу с отчетами</button></a>
+    <br><br>
+    <a href="/exit"><button class="brectangle"> Нажмите для выхода из системы</button></a>
+</center>
+{% endblock %}

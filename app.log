@@ -1,0 +1,43 @@
+DEBUG:root:None
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 01:35:16] "POST /query/querypr2 HTTP/1.1" 200 -
+DEBUG:root:None
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 01:37:04] "POST /query/querypr2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 01:37:05] "GET /query/querypr2 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\irkam\\Downloads\\db_stock\\blueprint_query\\route.py', reloading
+DEBUG:root:None
+INFO:werkzeug:127.0.0.1 - - [06/Nov/2023 01:39:44] "POST /query/querypr2 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\irkam\\Downloads\\db_stock\\blueprint_query\\route.py', reloading
+DEBUG:root:[{'month(in_date)': 1, 'pr_id': 456, 'sum(il_quantity)': Decimal('68')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2023 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:44:53] "POST /query/querypr2 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\irkam\\Downloads\\db_stock\\blueprint_query\\route.py', reloading
+DEBUG:root:[{'month(in_date)': 1, 'pr_id': 456, 'sum(il_quantity)': Decimal('68')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2023 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:48:11] "POST /query/querypr2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:48:13] "GET /query/querypr2 HTTP/1.1" 200 -
+DEBUG:root:[{'month(in_date)': 1, 'pr_id': 456, 'sum(il_quantity)': Decimal('68')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2023 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:52:15] "POST /query/querypr2 HTTP/1.1" 200 -
+DEBUG:root:[{'month(in_date)': 1, 'pr_id': 456, 'sum(il_quantity)': Decimal('68')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2023 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:54:08] "POST /query/querypr2 HTTP/1.1" 200 -
+DEBUG:root:[{'month(in_date)': 1, 'pr_id': 456, 'sum(il_quantity)': Decimal('68')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2023 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:54:50] "POST /query/querypr2 HTTP/1.1" 200 -
+DEBUG:root:[{'month(in_date)': 1, 'pr_id': 456, 'sum(il_quantity)': Decimal('68')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2023 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:55:23] "POST /query/querypr2 HTTP/1.1" 200 -
+DEBUG:root:[{'month(in_date)': 1, 'pr_id': 456, 'sum(il_quantity)': Decimal('68')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2023 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:55:41] "POST /query/querypr2 HTTP/1.1" 200 -
+DEBUG:root:[{'month(in_date)': 1, 'pr_id': 456, 'sum(il_quantity)': Decimal('68')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2023 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:57:45] "POST /query/querypr2 HTTP/1.1" 200 -
+DEBUG:root:[{'month(in_date)': 1, 'pr_id': 456, 'sum(il_quantity)': Decimal('68')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2023 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:58:53] "POST /query/querypr2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:59:21] "GET /query/querypr2 HTTP/1.1" 200 -
+DEBUG:root:[{'month(in_date)': 6, 'pr_id': 156, 'sum(il_quantity)': Decimal('56')}]
+INFO:root:SQL query to execute: select month(in_date), pr_id, sum(il_quantity) from rk6.invoice a  join rk6.invoice_line b on a.in_id = b.in_id where year(in_date) = 2022 group by month(in_date), pr_id;
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:59:23] "POST /query/querypr2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Nov/2023 00:59:36] "GET /query/querypr2 HTTP/1.1" 200 -

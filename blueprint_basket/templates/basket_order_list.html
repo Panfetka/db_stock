@@ -1,0 +1,98 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">-->
+<!--        <script type="text/javascript">-->
+
+
+<!--function validate_form (f){-->
+<!--	valid = true;-->
+<!--        if ( f.price.value == "" || f.add_amount.value == ""){-->
+<!--                alert ( "Пожалуйста заполните поля 'Цена' и 'Количество'." );-->
+<!--                valid = false;-->
+<!--        }-->
+
+
+<!--        return valid;-->
+<!--}-->
+
+<!--//&ndash;&gt;-->
+<!--</script>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<nav role="navigation">-->
+<!--  <div id="menuToggle">-->
+<!--    <input type="checkbox" id="nav-toggle"/>-->
+
+<!--    <span></span>-->
+<!--    <span></span>-->
+<!--    <span></span>-->
+
+<!--    <ul id="menu">-->
+
+<!--        <h2 style="color:black"> Ваша накладная</h2>-->
+<!--        <a style="color:black" class="button" href={{url_for('bp_order.clear_basket')}}> Очистить накладную </a>-->
+<!--        <br>-->
+<!--        {% if basket %}-->
+<!--        {% for key in basket%}-->
+<!--        <article class="smallarticle">-->
+<!--        <a>{{basket[key]['blank_name']}} </a>-->
+<!--        <a>Цена: {{basket[key]['blank_price']}} </a>-->
+<!--        <a>Количество: {{basket[key]['prod_count']}} </a>-->
+<!--            <form name="form1" method="post">-->
+<!--            <input type="hidden" name="id" value="{{key}}">-->
+<!--            <input type="submit" class="button1" name="action1" value="Удалить">-->
+<!--            </form>-->
+<!--        </article>-->
+<!--        {% endfor %}-->
+<!--        {% else %}-->
+<!--        <p> Ваша накладная пуста</p>-->
+<!--        {% endif %}-->
+<!--        <h2 style="color:#6e6e6e"> Итого: {{sum}}</h2>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</nav>-->
+
+
+
+
+<!--        <h2 align="center"> Заготовки, доступные к поставке</h2>-->
+<!--        {% if items %}-->
+
+<!--        {% for item in items%}-->
+<!--        <article class="article">-->
+
+<!--        <h1>{{item['blank_name']}} </h1>-->
+<!--                <form name="form" action="" method="post" onsubmit="return validate_form(this)">-->
+<!--                    <input type="hidden" name="pr_id" value="{{ item['pr_id']}}" >-->
+<!--                    <span style="color: white">Цена: </span>-->
+<!--                        <label for="price"></label>-->
+<!--                    <input type="text" name=price id="price" placeholder="Введите значение..."-->
+<!--                           onKeyPress ="if ((event.keyCode < 48) || (event.keyCode > 57)) event.returnValue = false;">-->
+<!--                    <span style="color: white">Количество: </span>-->
+<!--                        <label for="add_amount"></label>-->
+<!--                    <input type="text" name="add_amount" id="add_amount" placeholder="Введите значение..."-->
+<!--                           onKeyPress ="if ((event.keyCode < 48) || (event.keyCode > 57)) event.returnValue = false;">-->
+<!--                    <input type="submit" class="button1" name="action" value="Добавить">-->
+<!--                </form>-->
+
+
+<!--</article>-->
+<!--        {% endfor %}-->
+
+<!--        {% else %}-->
+<!--        <p> Нет доступных товаров</p>-->
+<!--        {% endif %}-->
+<!--<div align="center">-->
+<!--        <br><br>-->
+<!--    {% if basket %}-->
+<!--    <a class="button1" href="{{url_for('bp_order.save_order')}}">Оформить накладную</a>-->
+<!--    {% endif %}-->
+<!--</div>-->
+<!--    <a class="button1" href="{{url_for('menu_choice')}}">Вернуться в меню</a>-->
+
+<!--</body>-->
+<!--</html>-->

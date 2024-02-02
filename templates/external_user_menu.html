@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block ordinary %}
+<center>
+<br>
+    <a href="{{ url_for('bp_query.query_index') }}"><button class="brectangle">Посмотреть запросы</button></a>
+    <br><br>
+
+    <a href="{{ url_for('bp_order.save_order') }}"><button class="brectangle">Создать заказ</button></a>
+    <br><br>
+    <a href="/exit"><button class="brectangle"> Нажмите для выхода из системы</button></a>
+</center>
+{% endblock %}

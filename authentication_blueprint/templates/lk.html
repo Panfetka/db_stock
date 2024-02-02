@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+
+</head>
+<body>
+<center>
+    <header>
+
+    <a href="{{url_for('auth_bp.lk_index')}}">
+
+    </a>
+    <h1>продуктовый магазин</h1>
+    </header><br>
+    <h2>Вы авторизированы</h2>
+    личный кабинет<br><br>
+    <img src="../static/img_1.png" style="width: 200px; height: 200px;"><br>
+    {% if user_group %}
+    <h3>права: {{user_group}}</h3>
+        {% endif %}
+    <a href = "/exit" style="color: green;"><button>Выйти</button></a>
+    <br><br>
+    <a href = "/" style="color: green;"><button>Вернуться в главное меню</button></a>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* styles.css */
+
+/* Общие стили для страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Стили для кнопок и ссылок */
+a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для заголовков */
+h2 {
+    color: #343a40;
+}
+
+/* Стили для товаров в корзине и для покупки */
+.card {
+    margin-bottom: 20px;
+}
+
+/* Стили для кнопки очистки корзины */
+.clear-basket {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.clear-basket:hover {
+    background-color: #c82333;
+}

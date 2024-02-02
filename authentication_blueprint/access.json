@@ -1,0 +1,4 @@
+{"admin": ["bp_query", "bp_report"],
+"manager": ["bp_report", "bp_query"],
+  "ordinary": ["bp_query", "bp_order"]
+}

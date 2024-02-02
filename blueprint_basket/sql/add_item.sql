@@ -1,0 +1,1 @@
+select pr_name, pr_id from procurement where pr_id = '$id'

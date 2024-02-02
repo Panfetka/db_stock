@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic_page</title>
+    <style>
+        .rectangle {
+            width: 100%;
+            height: 40px;
+            margin: auto;
+            background-color: #eea1a6;
+            text-align: center;
+            font-size: 24px;
+        }
+        table {
+            background-color: rgba(255, 255, 224, 0.8);
+            border-radius: 10px;
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .custom-button {
+            background-color: #ffffff;
+            border: 1px solid #8f8787;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        .custom-button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <center>
+<!--        <p>Length of procurements: {{ procurements | length }}</p>-->
+        <div class="rectangle">{{prod_title}}</div>
+        <p>
+
+<!--            {% if procurements %}-->
+<!--                <p>Total procurements: {{ procurements|length }}</p>-->
+<!--                <table>-->
+<!--                    <tr>-->
+<!--        <th>ID детали</th>-->
+<!--        <th>Название детали</th>-->
+<!--        <th>Вес</th>-->
+<!--        <th>Материал</th>-->
+<!--        <th>ID на складе</th>-->
+<!--        <th>Дата</th>-->
+<!--        <th>Цена</th>-->
+<!--    </tr>-->
+<!--                                    {% for procurement in procurements %}-->
+<!--    <p>ID: {{ procurement['pr_id'] }}, Name: {{ procurement['pr_name'] }}</p>-->
+<!--{% endfor %}-->
+
+<!--    {% for procurement in procurements %}-->
+<!--        <tr>-->
+<!--            <td>{{ procurement['pr_id'] }}</td>-->
+<!--            <td>{{ procurement['pr_name'] }}</td>-->
+<!--            <td>{{ procurement['pr_weight'] }}</td>-->
+<!--            <td>{{ procurement['pr_material'] }}</td>-->
+<!--            <td>{{ procurement['st_id'] }}</td>-->
+<!--            <td>{{ procurement['st_date'] }}</td>-->
+<!--            <td>{{ procurement['st_price'] }}</td>-->
+<!--        </tr>-->
+<!--    {% endfor %}-->
+<!--</table>-->
+        <table>
+            <tr>
+                <th>ID детали</th>
+                <th>Название детали</th>
+                <th>Вес</th>
+                <th>Материал</th>
+<!--                <th>ID на складе</th>-->
+<!--                <th>ID детали</th>-->
+                <th>Количество</th>
+                <th width=30%>Дата</th>
+                <th>Цена</th>
+            </tr>
+            {% for procurement in procurements %}
+                <tr>
+                    <td>{{ procurement['pr_id'] if 'pr_id' in procurement }}</td>
+                    <td>{{ procurement['pr_name'] if 'pr_name' in procurement }}</td>
+                    <td>{{ procurement['pr_weight'] if 'pr_weight' in procurement }}</td>
+                    <td>{{ procurement['pr_material'] if 'pr_material' in procurement }}</td>
+<!--                    <td>{{ procurement['st_id'] if 'st_id' in procurement }}</td>-->
+<!--                    <td>{{ procurement['prr_id'] if 'prr_id' in procurement }}</td>-->
+                    <td>{{ procurement['st_amount'] if 'st_amount' in procurement }}</td>
+                    <td width=30%>{{ procurement['st_date'] if 'st_date' in procurement }}</td>
+                    <td>{{ procurement['st_price'] if 'st_price' in procurement }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+            {% else %}
+                <p>No data available</p>
+            {% endif %}
+            <br><br>
+            <form>
+                <br><br>
+                <input type="button" value="Вернуться назад" onclick="history.back()">
+            </form>
+        </p>
+    </center>
+</body>
+</html>

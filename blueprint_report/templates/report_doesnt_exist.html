@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Внимание</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+<main align="center">
+    <article>
+        <h1 align="center">
+        Отчет о {{theme}} за {{title[1]}} месяц {{title[0]}} года не существует
+            <br><br>
+            <a href={{url_for('bp_report.start_report')}}><button class="brectangle">Нажмите для возврата в меню отчетов</button></a>
+      </h1>
+    </article>
+</main>
+</body>
+</html>

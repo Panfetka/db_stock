@@ -1,0 +1,1 @@
+select blank1_rep_id, blank1_rep_name, blank1_rep_sum from reports1 where sup1_year_date = "$input_year" and  sup1_month_date = "$input_month"

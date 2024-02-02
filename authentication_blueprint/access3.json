@@ -1,0 +1,19 @@
+{
+  "direct": [
+    "bp_query",
+    "bp_report.view_rep1",
+    "bp_report.view_rep2"
+  ],
+
+  "manager": [
+    "bp_report",
+    "bp_query",
+    "bp_confirm.order_check"
+  ],
+
+  "external": [
+    "bp_order.order_index",
+    "bp_order.clear_basket",
+    "bp_order.save_order",
+    "bp_order.delete_item"
+  ]

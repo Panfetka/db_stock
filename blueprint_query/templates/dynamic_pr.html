@@ -1,0 +1,123 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<style>-->
+<!--/*body{*/-->
+<!--/*background-image: url('https://cdn.dribbble.com/users/2071065/screenshots/11182081/media/68e70e808efa5424c4093260836ecb8f.png');*/-->
+<!--/*background-size: cover;*/-->
+<!--/*background-repeat: no-repeat;*/-->
+<!--/*}*/-->
+<!--    .rectangle{-->
+<!--width: 1000%;-->
+<!--height: 40%;-->
+<!--margin:auto;-->
+<!--    }-->
+
+<!--.text_center{-->
+<!--color: #000000;-->
+<!--text-align: center;-->
+<!--font-size:200%-->
+<!--}-->
+<!--table{-->
+<!--    background-color: rgb(255, 255, 224, 0.8);-->
+<!--    border-radius: 10px;-->
+<!--}-->
+<!--.custom-button{-->
+<!--background-color: #ffffff;-->
+<!--border-color: #8f8787;-->
+<!--border-radius: 5px;-->
+<!--}-->
+<!--</style>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic_page</title>
+    <style>
+        .rectangle {
+            width: 100%;
+            height: 40px;
+            margin: auto;
+            background-color: #eea1a6;
+            text-align: center;
+            font-size: 24px;
+        }
+        table {
+            background-color: rgba(255, 255, 224, 0.8);
+            border-radius: 10px;
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .custom-button {
+            background-color: #ffffff;
+            border: 1px solid #8f8787;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        .custom-button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic_page</title>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<style>-->
+<!--    /* CSS стили здесь */-->
+<!--</style>-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Dynamic_page</title>-->
+</head>
+<body>
+    <center>
+<!--        <p>Length of procurements: {{ shippers | length }}</p>-->
+
+        <div class="rectangle text_center">{{ prod_title }}</div>
+        <p>
+            <table>
+                <tr>
+                    <th>Месяц</th>
+                    <th>Код заготовки</th>
+                    <th>Объем поставок</th>
+                </tr>
+<!--                {% for procurement in shippers %}-->
+<!--    <p>ID: {{ procurement['pr_id'] }}, Name: {{ procurement['pr_name'] }}</p>-->
+<!--{% endfor %}-->
+
+                {% for procurement in shippers %}
+                    <tr>
+                        <td>{{ procurement['month(in_date)'] }}</td>
+                        <td>{{ procurement['pr_id'] }}</td>
+                        <td>{{ procurement['sum(il_quantity)'] }}</td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+            <form>
+                <br><br>
+                <input type="button" value="Вернуться назад" onclick="history.back()">
+            </form>
+        </p>
+    </center>
+</body>
+</html>
+

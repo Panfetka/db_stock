@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .rectangle{
+width: 100%;
+height: 30%;
+border:1px solid;
+margin:auto;
+background: #ffc0cb;}
+    .brectangle{
+width: 30%;
+height: 20%;
+border:1px solid;
+border-radius: 10px;
+margin:auto;
+background: #ffffe0;}
+.text_center{
+color: #000000;
+text-align: center;
+font-size:200%
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Запросы</title>
+</head>
+<body>
+<center>
+    <div class="rectangle text_center">Меню выбора запросов </div>
+    <br><br>
+    <a href="{{url_for('bp_query.query_index1')}}"> <button class="brectangle">Поставщики, заключившие долгосрочные договора, но ни разу не поставившие заготовки на склад.</button></a>
+    <br><br>
+    <a href="{{url_for('bp_query.query_index_pr1')}}"> <button class="brectangle">Сведения о самой дорогой заготовке на складе</button></a>
+    <br><br>
+    <a href="{{url_for('bp_query.query_index_pr2')}}"> <button class="brectangle">Данные о поставках за указанный год</button></a>
+    <br><br>
+    <br><br>
+    <input type="button" value="Вернуться назад" onclick="history.back()">
+</center>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат выполнения запроса</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+<main align="center">
+    <article class="bigarticle">
+ <h1 align="center"> Отчет о {{theme}} за {{title[1]}} месяц {{title[0]}} года</h1> <br><br>
+    <table border = 1 width = 80%>
+      <tr>
+          {% for column in schema %}
+            <td class= border align="center">{{column}}</td>
+          {% endfor %}
+      </tr>
+        {% for line in result %}
+          <tr>
+           {% for column in line %}
+            <td align = 'center'> {{column}} </td>
+           {% endfor %}
+         </tr>
+        {% endfor %}
+    </table> <br><br>
+    <a href={{url_for('bp_report.start_report')}}> Вернуться в меню отчетов</a>
+    </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body{
+    background-image: url('https://vsememy.ru/kartinki/wp-content/uploads/2023/04/1675752534_papik-pro-p-risunok-sklad-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    .brectangle{
+width: 20%;
+height: 40px;
+border:1px solid;
+border-radius: 5px;
+margin:auto;
+background-color: rgba(35, 31, 32, 0.6);
+color: white;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Menu report</title>
+</head>
+<body>
+<main align="center">
+    <article>
+    <h2 align="center">Меню отчетов</h2>
+    <center>
+        {% for report in report_list %}
+        <form action='' method = 'POST'>
+            <label for="create_rep" class="named_list">{{report['rep_name']}}</label>
+
+            <input type="submit" name="create_rep" id="create_rep" value="Создать">
+
+            <input type="submit" name="view_rep" id="view_rep" value="Просмотреть">
+            <input type="hidden" name="rep_id" value = "{{report['rep_id']}}">
+            <br><br>
+        </form>
+        {% endfor %}
+        <br><br>
+                <a href={{url_for('menu_choice')}}><button class="brectangle"> Вернуться в главное меню</button></a>
+    </center>
+    </article>
+</main>
+</body>
+</html>
